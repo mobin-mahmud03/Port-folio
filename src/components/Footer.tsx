@@ -1,11 +1,11 @@
 import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
-import { 
-  Mail, 
-  MapPin, 
-  ExternalLink, 
-  Sparkles, 
-  Copy 
+import {
+  Mail,
+  MapPin,
+  ExternalLink,
+  Sparkles,
+  Copy
 } from 'lucide-react';
 import { GithubIcon } from './GithubIcon';
 
@@ -14,7 +14,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onShowToast }) => {
-  const email = 'mobin.mahmud.dev@gmail.com';
+  const email = 'mobinmahmud15@gmail.com';
   const githubUrl = 'https://github.com/mobin-mahmud03';
   const location = 'Dhaka, Bangladesh // Remote Worldwide';
 
@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ onShowToast }) => {
     <footer className="w-full py-16 bg-[#0a0807] text-[#f2ece2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Column: LET'S COLLABORATE */}
           <div className="lg:col-span-5 space-y-6">
             <div>
