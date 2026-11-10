@@ -95,11 +95,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
               <div className="p-4 bg-[#181412] rounded-lg border border-[#2a2420]">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h5 className="font-bold text-sm text-[#f2ece2]">Synapse OS — SaaS Architecture & Operations Dashboard</h5>
+                    <h5 className="font-bold text-sm text-[#f2ece2]">KindredActs — Social Dev & Community Event Platform</h5>
                     <p className="text-xs text-[#8e857c] font-mono-code mt-0.5">Next.js • TypeScript • Better Auth • MongoDB • Tailwind CSS</p>
                   </div>
                   <a
-                    href="https://github.com/mobin-mahmud03"
+                    href="https://github.com/mobin-mahmud03/kinderacts-client"
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-1 text-xs text-[#d83a34] hover:underline"
@@ -108,8 +108,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
                   </a>
                 </div>
                 <ul className="list-disc list-inside text-xs text-[#8e857c] mt-2.5 space-y-1">
-                  <li>Built modular micro-dashboards with server-rendered Next.js components and real-time state.</li>
-                  <li>Integrated Better Auth for multi-tenant sessions, OAuth, and granular RBAC.</li>
+                  <li>Built responsive community-driven event management portals with Next.js and Tailwind CSS.</li>
+                  <li>Integrated Better Auth for multi-tenant sessions, secure event organizer roles, and OAuth.</li>
                   <li>Engineered high-throughput MongoDB data models with lean schema indexes.</li>
                 </ul>
               </div>
@@ -117,8 +117,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
               <div className="p-4 bg-[#181412] rounded-lg border border-[#2a2420]">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h5 className="font-bold text-sm text-[#f2ece2]">Nexus Engine — High-Performance API & Commerce Platform</h5>
-                    <p className="text-xs text-[#8e857c] font-mono-code mt-0.5">React.js • Node.js • Express.js • MySQL • Vercel</p>
+                    <h5 className="font-bold text-sm text-[#f2ece2]">Bazar Dor — Daily Essential Commodity Market Price Tracker</h5>
+                    <p className="text-xs text-[#8e857c] font-mono-code mt-0.5">React • Next.js • Express.js • MySQL • Vercel</p>
                   </div>
                   <a
                     href="https://github.com/mobin-mahmud03"
@@ -130,8 +130,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
                   </a>
                 </div>
                 <ul className="list-disc list-inside text-xs text-[#8e857c] mt-2.5 space-y-1">
-                  <li>Implemented RESTful endpoint architecture handling asynchronous catalog queries with MySQL.</li>
-                  <li>Architected responsive frontend state containers in React with rapid sub-millisecond updates.</li>
+                  <li>Engineered daily price tracking telemetry and commodity price fluctuation monitors.</li>
+                  <li>Designed normalized relational database schemas with MySQL for market comparisons.</li>
                   <li>Configured automated testing and deployment workflows on Vercel with GitHub Actions.</li>
                 </ul>
               </div>

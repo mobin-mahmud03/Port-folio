@@ -1,13 +1,13 @@
 import React from 'react';
-import { 
-  Compass, 
-  Workflow, 
-  Code, 
-  Gauge, 
-  Rocket, 
-  ExternalLink, 
-  Activity, 
-  ArrowUpRight 
+import {
+  Compass,
+  Workflow,
+  Code,
+  Gauge,
+  Rocket,
+  ExternalLink,
+  Activity,
+  ArrowUpRight
 } from 'lucide-react';
 import { GithubIcon } from './GithubIcon';
 
@@ -48,32 +48,34 @@ export const ProcessAndWork: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'SYNAPSE OS — SAAS DASHBOARD',
+      title: 'KINDREDACTS — SOCIAL DEV PLATFORM',
       category: 'FULL-STACK // NEXT.JS // BETTER AUTH',
-      description: 'A cloud operations platform featuring multi-tenant session authentication, real-time analytics telemetry, and responsive dark-mode management portals.',
+      description: 'A modern, responsive, community-driven event management platform where citizens can discover, organize, join, and track social welfare events in their local communities.',
       stack: ['Next.js', 'TypeScript', 'Better Auth', 'MongoDB', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/mobin-mahmud03',
-      liveUrl: 'https://github.com/mobin-mahmud03',
-      mockupHeader: 'app.synapse-os.io',
+      githubUrl: 'https://github.com/mobin-mahmud03/kinderacts-client',
+      liveUrl: 'https://kinderacts-client.vercel.app/',
+      mockupHeader: 'kinderacts-client.vercel.app',
+      image: 'src/assets/kindredacts.png',
       metrics: [
-        { label: 'Uptime', value: '99.98%' },
-        { label: 'Auth Latency', value: '<42ms' },
-        { label: 'Active Sessions', value: '1,420+' }
+        { label: 'Focus', value: 'Social Welfare' },
+        { label: 'Auth Flow', value: 'Better Auth' },
+        { label: 'Hosting', value: 'Vercel' }
       ]
     },
     {
       id: 2,
-      title: 'NEXUS ENGINE — COMMERCE & API',
+      title: 'BAZAR DOR — DAILY MARKET PRICE TRACKER',
       category: 'BACKEND & FRONTEND // NODE.JS // MYSQL',
-      description: 'A high-throughput commerce and digital catalog engine with relational database optimization, structured REST endpoints, and automated Vercel deployments.',
-      stack: ['React', 'Node.js', 'Express.js', 'MySQL', 'Vercel'],
-      githubUrl: 'https://github.com/mobin-mahmud03',
-      liveUrl: 'https://github.com/mobin-mahmud03',
-      mockupHeader: 'api.nexus-engine.dev',
+      description: 'A one-stop platform for tracking daily prices of essential commodities, monitoring price fluctuations, and comparing prices across markets.',
+      stack: ['React', 'Next.js', 'Express.js', 'MySQL', 'Vercel'],
+      githubUrl: 'https://github.com/mobin-mahmud03/bazar-dor-project',
+      liveUrl: 'https://bazar-dor-project-ten.vercel.app/',
+      mockupHeader: 'bazar-dor.vercel.app',
+      image: 'src/assets/bazardor.png',
       metrics: [
-        { label: 'RPS', value: '3,800/s' },
-        { label: 'DB Query Avg', value: '11ms' },
-        { label: 'Endpoint Uptime', value: '100%' }
+        { label: 'Engine', value: 'Price Tracker' },
+        { label: 'Database', value: 'MySQL' },
+        { label: 'Hosting', value: 'Vercel' }
       ]
     }
   ];
@@ -82,7 +84,7 @@ export const ProcessAndWork: React.FC = () => {
     <section className="w-full py-16 border-b border-[#221c19] bg-[#0b0908]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
+
           {/* Left Column: My Process (5 Steps) */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
@@ -209,19 +211,33 @@ export const ProcessAndWork: React.FC = () => {
                       {proj.description}
                     </p>
 
-                    {/* Live Metric Badges */}
-                    <div className="grid grid-cols-3 gap-2 my-4 p-3 rounded-lg bg-[#0e0c0b] border border-[#201a17]">
-                      {proj.metrics.map((m, mIdx) => (
-                        <div key={mIdx} className="text-center">
-                          <span className="text-[9px] uppercase tracking-wider font-mono-code text-[#6e665d] block">
-                            {m.label}
-                          </span>
-                          <span className="text-xs sm:text-sm font-display font-bold text-[#f2ece2] mt-0.5 block">
-                            {m.value}
-                          </span>
+                    {/* Project Screenshot Preview */}
+                    {proj.image && (
+                      <a
+                        href={proj.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group/shot relative my-4 block rounded-lg overflow-hidden border border-[#2e2622] hover:border-[#d83a34] bg-[#0c0a09] transition-all duration-300 shadow-xl hover:shadow-[#d83a34]/15"
+                        title={`View ${proj.title} live preview`}
+                      >
+                        <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#14100e]">
+                          <img
+                            src={proj.image}
+                            alt={`${proj.title} Screenshot`}
+                            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/shot:scale-[1.03]"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0b0908]/80 via-transparent to-transparent opacity-40 group-hover/shot:opacity-10 transition-opacity"></div>
+
+                          {/* Live overlay badge on hover */}
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/shot:opacity-100 transition-opacity duration-200 bg-black/45 backdrop-blur-[1px]">
+                            <span className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#d83a34] text-xs font-mono-code text-[#f2ece2] shadow-xl shadow-black/60 tracking-wider uppercase font-semibold transform translate-y-1 group-hover/shot:translate-y-0 transition-transform">
+                              <span>View Live Demo</span>
+                              <ExternalLink className="w-3.5 h-3.5" />
+                            </span>
+                          </div>
                         </div>
-                      ))}
-                    </div>
+                      </a>
+                    )}
 
                     {/* Tech Chips */}
                     <div className="flex flex-wrap gap-1.5 pt-2 border-t border-[#1f1917]">

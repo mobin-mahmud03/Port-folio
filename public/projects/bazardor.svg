@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bazarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1013"/>
+      <stop offset="50%" stop-color="#12161b"/>
+      <stop offset="100%" stop-color="#0a0c0e"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d83a34" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#d83a34" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="bazarCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0f1318"/>
+    </linearGradient>
+    <filter id="bzShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bazarBg)"/>
+
+  <!-- Top App Navigation -->
+  <rect x="0" y="0" width="1200" height="64" fill="#111419" stroke="#1f252e" stroke-width="1"/>
+  <circle cx="40" cy="32" r="14" fill="#d83a34"/>
+  <text x="64" y="38" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#f2ece2" letter-spacing="1">BAZAR<tspan fill="#d83a34">DOR</tspan></text>
+  <text x="175" y="38" font-family="system-ui, sans-serif" font-size="12" fill="#6e7787">| Daily Commodity Price Telemetry</text>
+
+  <!-- Market selector pills -->
+  <g transform="translate(520, 18)">
+    <rect x="0" y="0" width="100" height="28" rx="14" fill="#d83a34"/>
+    <text x="50" y="19" font-family="system-ui, sans-serif" font-weight="700" font-size="11" fill="#f2ece2" text-anchor="middle">All Markets</text>
+    
+    <rect x="110" y="0" width="115" height="28" rx="14" fill="#1b212a" stroke="#2b3442" stroke-width="1"/>
+    <text x="167" y="19" font-family="system-ui, sans-serif" font-size="11" fill="#9da7b7" text-anchor="middle">Karwan Bazar</text>
+    
+    <rect x="235" y="0" width="105" height="28" rx="14" fill="#1b212a" stroke="#2b3442" stroke-width="1"/>
+    <text x="287" y="19" font-family="system-ui, sans-serif" font-size="11" fill="#9da7b7" text-anchor="middle">Mirpur-1</text>
+  </g>
+
+  <!-- Live update badge -->
+  <rect x="1010" y="18" width="150" height="28" rx="6" fill="#13231a" stroke="#10b981" stroke-width="1"/>
+  <circle cx="1025" cy="32" r="4" fill="#10b981"/>
+  <text x="1038" y="36" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#10b981">UPDATED TODAY, 6 AM</text>
+
+  <!-- Top 4 Ticker Metric Cards -->
+  <g transform="translate(40, 85)">
+    <!-- Item 1: Rice -->
+    <g transform="translate(0, 0)">
+      <rect width="265" height="100" rx="10" fill="url(#bazarCard)" stroke="#222a36" stroke-width="1" filter="url(#bzShadow)"/>
+      <text x="20" y="32" font-family="system-ui, sans-serif" font-size="12" fill="#8e99a8">Miniket Rice (Per Kg)</text>
+      <text x="20" y="65" font-family="system-ui, sans-serif" font-weight="800" font-size="26" fill="#f2ece2">৳ 68.00</text>
+      <rect x="175" y="42" width="70" height="22" rx="4" fill="#12251a"/>
+      <text x="210" y="57" font-family="system-ui, sans-serif" font-weight="700" font-size="11" fill="#10b981" text-anchor="middle">- ৳2.00 ▼</text>
+      <text x="20" y="86" font-family="system-ui, sans-serif" font-size="10" fill="#606c7d">Avg: ৳67 - ৳70</text>
+    </g>
+
+    <!-- Item 2: Onion -->
+    <g transform="translate(285, 0)">
+      <rect width="265" height="100" rx="10" fill="url(#bazarCard)" stroke="#222a36" stroke-width="1" filter="url(#bzShadow)"/>
+      <text x="20" y="32" font-family="system-ui, sans-serif" font-size="12" fill="#8e99a8">Local Onion (Per Kg)</text>
+      <text x="20" y="65" font-family="system-ui, sans-serif" font-weight="800" font-size="26" fill="#f2ece2">৳ 95.00</text>
+      <rect x="175" y="42" width="70" height="22" rx="4" fill="#2d1414"/>
+      <text x="210" y="57" font-family="system-ui, sans-serif" font-weight="700" font-size="11" fill="#ef4444" text-anchor="middle">+ ৳5.00 ▲</text>
+      <text x="20" y="86" font-family="system-ui, sans-serif" font-size="10" fill="#606c7d">Avg: ৳90 - ৳100</text>
+    </g>
+
+    <!-- Item 3: Eggs -->
+    <g transform="translate(570, 0)">
+      <rect width="265" height="100" rx="10" fill="url(#bazarCard)" stroke="#222a36" stroke-width="1" filter="url(#bzShadow)"/>
+      <text x="20" y="32" font-family="system-ui, sans-serif" font-size="12" fill="#8e99a8">Farm Eggs (1 Dozen)</text>
+      <text x="20" y="65" font-family="system-ui, sans-serif" font-weight="800" font-size="26" fill="#f2ece2">৳ 145.00</text>
+      <rect x="175" y="42" width="70" height="22" rx="4" fill="#12251a"/>
+      <text x="210" y="57" font-family="system-ui, sans-serif" font-weight="700" font-size="11" fill="#10b981" text-anchor="middle">- ৳5.00 ▼</text>
+      <text x="20" y="86" font-family="system-ui, sans-serif" font-size="10" fill="#606c7d">Avg: ৳140 - ৳150</text>
+    </g>
+
+    <!-- Item 4: Soybean Oil -->
+    <g transform="translate(855, 0)">
+      <rect width="265" height="100" rx="10" fill="url(#bazarCard)" stroke="#222a36" stroke-width="1" filter="url(#bzShadow)"/>
+      <text x="20" y="32" font-family="system-ui, sans-serif" font-size="12" fill="#8e99a8">Soybean Oil (1 Litre Bottle)</text>
+      <text x="20" y="65" font-family="system-ui, sans-serif" font-weight="800" font-size="26" fill="#f2ece2">৳ 172.00</text>
+      <rect x="175" y="42" width="70" height="22" rx="4" fill="#1f252e"/>
+      <text x="210" y="57" font-family="system-ui, sans-serif" font-weight="700" font-size="11" fill="#9da7b7" text-anchor="middle">Stable ▬</text>
+      <text x="20" y="86" font-family="system-ui, sans-serif" font-size="10" fill="#606c7d">Govt Rate: ৳175</text>
+    </g>
+  </g>
+
+  <!-- Main Chart Section: 30-Day Trend Comparison -->
+  <g transform="translate(40, 210)">
+    <rect width="750" height="425" rx="12" fill="url(#bazarCard)" stroke="#222a36" stroke-width="1" filter="url(#bzShadow)"/>
+    <text x="30" y="40" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#f2ece2">30-Day Price Fluctuation Telemetry</text>
+    <text x="30" y="62" font-family="system-ui, sans-serif" font-size="12" fill="#717d8e">Aggregated across 14 wholesale and retail bazaars in Dhaka</text>
+
+    <!-- Chart Canvas Area -->
+    <g transform="translate(30, 95)">
+      <!-- Grid lines -->
+      <line x1="0" y1="0" x2="690" y2="0" stroke="#1f2633" stroke-dasharray="4"/>
+      <line x1="0" y1="65" x2="690" y2="65" stroke="#1f2633" stroke-dasharray="4"/>
+      <line x1="0" y1="130" x2="690" y2="130" stroke="#1f2633" stroke-dasharray="4"/>
+      <line x1="0" y1="195" x2="690" y2="195" stroke="#1f2633" stroke-dasharray="4"/>
+      <line x1="0" y1="260" x2="690" y2="260" stroke="#252d3c"/>
+
+      <!-- Fill Gradient under curve -->
+      <path d="M 0 170 Q 120 190 230 140 T 460 90 T 690 120 L 690 260 L 0 260 Z" fill="url(#chartGrad)"/>
+      
+      <!-- Trend Line -->
+      <path d="M 0 170 Q 120 190 230 140 T 460 90 T 690 120" fill="none" stroke="#d83a34" stroke-width="3"/>
+      
+      <!-- Target Point Dot -->
+      <circle cx="460" cy="90" r="6" fill="#f2ece2" stroke="#d83a34" stroke-width="3"/>
+      <rect x="420" y="45" width="80" height="30" rx="6" fill="#d83a34"/>
+      <text x="460" y="65" font-family="system-ui, sans-serif" font-weight="700" font-size="11" fill="#f2ece2" text-anchor="middle">৳ 95.00</text>
+
+      <!-- Month dates on X axis -->
+      <text x="0" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Oct 12</text>
+      <text x="170" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Oct 19</text>
+      <text x="340" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Oct 26</text>
+      <text x="510" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Nov 02</text>
+      <text x="660" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Today</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Market Comparison Table -->
+  <g transform="translate(815, 210)">
+    <rect width="345" height="425" rx="12" fill="url(#bazarCard)" stroke="#222a36" stroke-width="1" filter="url(#bzShadow)"/>
+    <text x="25" y="40" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#f2ece2">MARKET COMPARISON</text>
+    <text x="25" y="62" font-family="system-ui, sans-serif" font-size="11" fill="#717d8e">Live spot prices for Potato (Kg)</text>
+    
+    <!-- Table Rows -->
+    <g transform="translate(25, 90)">
+      <rect width="295" height="56" rx="8" fill="#131820" stroke="#1f2531" stroke-width="1"/>
+      <text x="16" y="26" font-family="system-ui, sans-serif" font-weight="700" font-size="13" fill="#f2ece2">Karwan Bazar (Wholesale)</text>
+      <text x="16" y="44" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Lowest today</text>
+      <text x="280" y="34" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#10b981" text-anchor="end">৳ 52.00</text>
+    </g>
+
+    <g transform="translate(25, 160)">
+      <rect width="295" height="56" rx="8" fill="#131820" stroke="#1f2531" stroke-width="1"/>
+      <text x="16" y="26" font-family="system-ui, sans-serif" font-weight="700" font-size="13" fill="#f2ece2">Mirpur 1 Kitchen Market</text>
+      <text x="16" y="44" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Retail</text>
+      <text x="280" y="34" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#f2ece2" text-anchor="end">৳ 58.00</text>
+    </g>
+
+    <g transform="translate(25, 230)">
+      <rect width="295" height="56" rx="8" fill="#131820" stroke="#1f2531" stroke-width="1"/>
+      <text x="16" y="26" font-family="system-ui, sans-serif" font-weight="700" font-size="13" fill="#f2ece2">Mohammadpur Krishi Market</text>
+      <text x="16" y="44" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Retail</text>
+      <text x="280" y="34" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#f2ece2" text-anchor="end">৳ 56.00</text>
+    </g>
+
+    <g transform="translate(25, 300)">
+      <rect width="295" height="56" rx="8" fill="#131820" stroke="#1f2531" stroke-width="1"/>
+      <text x="16" y="26" font-family="system-ui, sans-serif" font-weight="700" font-size="13" fill="#f2ece2">Chaldal Online Grocery</text>
+      <text x="16" y="44" font-family="system-ui, sans-serif" font-size="11" fill="#606c7d">Delivered</text>
+      <text x="280" y="34" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#f2ece2" text-anchor="end">৳ 62.00</text>
+    </g>
+  </g>
+</svg>
+

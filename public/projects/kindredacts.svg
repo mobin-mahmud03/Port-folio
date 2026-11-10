@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120e0d"/>
+      <stop offset="50%" stop-color="#171210"/>
+      <stop offset="100%" stop-color="#0e0b0a"/>
+    </linearGradient>
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d83a34"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1614"/>
+      <stop offset="100%" stop-color="#14100e"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid Texture -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(216, 58, 52, 0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+
+  <!-- Top Navigation Mockup -->
+  <rect x="0" y="0" width="1200" height="64" fill="#140f0e" stroke="#261f1c" stroke-width="1"/>
+  <circle cx="40" cy="32" r="14" fill="url(#crimsonGrad)"/>
+  <text x="64" y="38" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#f2ece2" letter-spacing="1">KINDRED<tspan fill="#d83a34">ACTS</tspan></text>
+  
+  <!-- Nav Links -->
+  <text x="320" y="37" font-family="system-ui, sans-serif" font-weight="500" font-size="14" fill="#d83a34">Explore Events</text>
+  <text x="460" y="37" font-family="system-ui, sans-serif" font-weight="500" font-size="14" fill="#a0978d">Organize</text>
+  <text x="560" y="37" font-family="system-ui, sans-serif" font-weight="500" font-size="14" fill="#a0978d">Volunteers</text>
+  <text x="670" y="37" font-family="system-ui, sans-serif" font-weight="500" font-size="14" fill="#a0978d">Impact</text>
+
+  <!-- Action button -->
+  <rect x="1030" y="16" width="130" height="34" rx="17" fill="url(#crimsonGrad)"/>
+  <text x="1095" y="38" font-family="system-ui, sans-serif" font-weight="700" font-size="13" fill="#f2ece2" text-anchor="middle">+ Create Event</text>
+
+  <!-- Hero Banner inside app -->
+  <rect x="40" y="90" width="1120" height="150" rx="12" fill="url(#cardGrad)" stroke="#2e2420" stroke-width="1"/>
+  <text x="80" y="145" font-family="system-ui, sans-serif" font-weight="900" font-size="28" fill="#f2ece2">Empower Local Communities Through Action</text>
+  <text x="80" y="175" font-family="system-ui, sans-serif" font-size="14" fill="#8e857c">Discover, organize, and join volunteer social welfare initiatives across your neighborhood.</text>
+  
+  <!-- Search input bar -->
+  <rect x="80" y="195" width="480" height="34" rx="8" fill="#0d0a09" stroke="#332924" stroke-width="1"/>
+  <text x="100" y="217" font-family="system-ui, sans-serif" font-size="12" fill="#6e665d">🔍  Search events by location, cause, or date...</text>
+
+  <!-- Stats ribbon -->
+  <g transform="translate(850, 115)">
+    <text x="0" y="30" font-family="system-ui, sans-serif" font-weight="800" font-size="28" fill="#d83a34">1,450+</text>
+    <text x="0" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#8e857c" letter-spacing="1">ACTIVE VOLUNTEERS</text>
+    
+    <text x="160" y="30" font-family="system-ui, sans-serif" font-weight="800" font-size="28" fill="#f2ece2">86</text>
+    <text x="160" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#8e857c" letter-spacing="1">EVENTS ORGANIZED</text>
+  </g>
+
+  <!-- Section Title -->
+  <text x="40" y="278" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#f2ece2" letter-spacing="1">UPCOMING COMMUNITY INITIATIVES</text>
+  <line x1="40" y1="288" x2="1160" y2="288" stroke="#221c19" stroke-width="1"/>
+
+  <!-- 3 Event Cards -->
+  <!-- Card 1 -->
+  <g transform="translate(40, 305)">
+    <rect width="355" height="330" rx="10" fill="url(#cardGrad)" stroke="#2e2420" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="355" height="150" rx="10" fill="#241b18"/>
+    <!-- Card header illustration -->
+    <rect x="20" y="20" width="80" height="24" rx="4" fill="#d83a34" fill-opacity="0.2"/>
+    <text x="60" y="36" font-family="system-ui, sans-serif" font-weight="700" font-size="10" fill="#d83a34" text-anchor="middle">RELIEF DRIVE</text>
+    <text x="290" y="36" font-family="system-ui, sans-serif" font-size="12" fill="#8e857c">Nov 15</text>
+    <circle cx="177" cy="85" r="36" fill="#181210" stroke="#d83a34" stroke-width="2"/>
+    <text x="177" y="93" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle">🧤</text>
+    
+    <text x="20" y="185" font-family="system-ui, sans-serif" font-weight="700" font-size="17" fill="#f2ece2">Winter Warmth Drive 2026</text>
+    <text x="20" y="210" font-family="system-ui, sans-serif" font-size="12" fill="#8e857c">Distributing blankets and winter garments to over 500 families in North Dhaka.</text>
+    
+    <text x="20" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#a0978d">📍 Mirpur 10, Dhaka  •  👥 48 Joined</text>
+    
+    <rect x="20" y="270" width="315" height="36" rx="6" fill="#1d1614" stroke="#d83a34" stroke-width="1"/>
+    <text x="177" y="293" font-family="system-ui, sans-serif" font-weight="700" font-size="12" fill="#f2ece2" text-anchor="middle">Join Event →</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(422, 305)">
+    <rect width="355" height="330" rx="10" fill="url(#cardGrad)" stroke="#2e2420" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="355" height="150" rx="10" fill="#1e2418"/>
+    <rect x="20" y="20" width="105" height="24" rx="4" fill="#34d858" fill-opacity="0.2"/>
+    <text x="72" y="36" font-family="system-ui, sans-serif" font-weight="700" font-size="10" fill="#34d858" text-anchor="middle">ENVIRONMENT</text>
+    <text x="290" y="36" font-family="system-ui, sans-serif" font-size="12" fill="#8e857c">Nov 22</text>
+    <circle cx="177" cy="85" r="36" fill="#181210" stroke="#34d858" stroke-width="2"/>
+    <text x="177" y="93" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle">🌱</text>
+    
+    <text x="20" y="185" font-family="system-ui, sans-serif" font-weight="700" font-size="17" fill="#f2ece2">Urban Canopy Tree Plant</text>
+    <text x="20" y="210" font-family="system-ui, sans-serif" font-size="12" fill="#8e857c">Planting 1,000 indigenous trees across roadside walkways to fight urban heat.</text>
+    
+    <text x="20" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#a0978d">📍 Dhanmondi Lake  •  👥 92 Joined</text>
+    
+    <rect x="20" y="270" width="315" height="36" rx="6" fill="#1d1614" stroke="#34d858" stroke-width="1"/>
+    <text x="177" y="293" font-family="system-ui, sans-serif" font-weight="700" font-size="12" fill="#f2ece2" text-anchor="middle">Join Event →</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(805, 305)">
+    <rect width="355" height="330" rx="10" fill="url(#cardGrad)" stroke="#2e2420" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="355" height="150" rx="10" fill="#242118"/>
+    <rect x="20" y="20" width="85" height="24" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="62" y="36" font-family="system-ui, sans-serif" font-weight="700" font-size="10" fill="#f59e0b" text-anchor="middle">EDUCATION</text>
+    <text x="290" y="36" font-family="system-ui, sans-serif" font-size="12" fill="#8e857c">Nov 28</text>
+    <circle cx="177" cy="85" r="36" fill="#181210" stroke="#f59e0b" stroke-width="2"/>
+    <text x="177" y="93" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle">📚</text>
+    
+    <text x="20" y="185" font-family="system-ui, sans-serif" font-weight="700" font-size="17" fill="#f2ece2">Kids Literacy & Book Drive</text>
+    <text x="20" y="210" font-family="system-ui, sans-serif" font-size="12" fill="#8e857c">Collecting story books and school stationery to establish a community library.</text>
+    
+    <text x="20" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#a0978d">📍 Uttara Sector 4  •  👥 64 Joined</text>
+    
+    <rect x="20" y="270" width="315" height="36" rx="6" fill="#1d1614" stroke="#f59e0b" stroke-width="1"/>
+    <text x="177" y="293" font-family="system-ui, sans-serif" font-weight="700" font-size="12" fill="#f2ece2" text-anchor="middle">Join Event →</text>
+  </g>
+</svg>
+
