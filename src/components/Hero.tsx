@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, Download, ArrowDown, Code2, Database, ShieldCheck } from 'lucide-react';
 import portraitImg from '../assets/portait.png';
+import { PortraitReveal } from './PortraitReveal';
 
 interface HeroProps {
   resumeUrl?: string;
@@ -101,7 +102,7 @@ export const Hero: React.FC<HeroProps> = ({
 
               {/* Fixed Portrait Photo */}
               <div className="relative z-10 w-full h-full flex items-end justify-center">
-                <img
+                <PortraitReveal
                   src={portraitImg}
                   alt="Mobin Mahmud"
                   className="w-full h-full object-contain object-bottom filter contrast-105 select-none pointer-events-none"

@@ -7,6 +7,7 @@ import { AboutAndTools } from './components/AboutAndTools';
 import { Footer } from './components/Footer';
 import { ResumeModal } from './components/ResumeModal';
 import { Toast } from './components/Toast';
+import { CustomCursor } from './components/CustomCursor';
 
 export function App() {
   // Resume link configured to your Google Drive resume
@@ -26,6 +27,8 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#0b0908] text-[#f2ece2] editorial-grid-bg relative flex flex-col selection:bg-[#d83a34] selection:text-[#f2ece2]">
+      <CustomCursor />
+
       {/* Top Navigation */}
       <Navbar resumeUrl={resumeUrl} onOpenResume={() => setIsResumeOpen(true)} />
 

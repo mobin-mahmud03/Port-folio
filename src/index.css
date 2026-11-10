@@ -111,3 +111,62 @@
 .animate-pulse-subtle {
   animation: pulse-subtle 2s infinite ease-in-out;
 }
+
+/* ---------- Custom cursor ---------- */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  will-change: transform;
+}
+
+.cursor-dot span,
+.cursor-ring span {
+  display: block;
+  border-radius: 9999px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.cursor-dot span {
+  width: 7px;
+  height: 7px;
+  background: var(--accent-crimson);
+  box-shadow: 0 0 0 1px rgba(242, 236, 226, 0.55);
+}
+
+.cursor-ring span {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid rgba(242, 236, 226, 0.55);
+}
+
+.cursor-ring[data-hover='1'] span {
+  transform: scale(1.7);
+  border-color: var(--accent-crimson);
+  background-color: rgba(216, 58, 52, 0.14);
+}
+
+.cursor-ring[data-down='1'] span { transform: scale(0.8); }
+.cursor-ring[data-hover='1'][data-down='1'] span { transform: scale(1.4); }
+.cursor-dot[data-down='1'] span { transform: scale(0.45); }
+.cursor-dot[data-hover='1'] span { background: var(--text-cream); }
+
+@media (hover: hover) and (pointer: fine) {
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
