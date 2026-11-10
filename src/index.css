@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #0b0908;
+    --bg-card: #13100e;
+    --border-color: rgba(220, 195, 175, 0.12);
+    --border-crimson: rgba(216, 58, 52, 0.35);
+    --accent-crimson: #d83a34;
+    --accent-glow: #e0443e;
+    --text-cream: #f2ece2;
+    --text-muted: #8e857c;
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-cream);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-editorial-title {
+  font-family: 'Anton', 'Impact', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-luxury {
+  font-family: 'Italiana', serif;
+}
+
+/* Custom subtle noise background texture */
+.editorial-grid-bg {
+  background-image: 
+    radial-gradient(circle at 50% 28%, rgba(216, 58, 52, 0.18) 0%, rgba(184, 46, 40, 0.06) 30%, transparent 60%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 60px 60px, 60px 60px;
+}
+
+/* Glass and dark card styling */
+.editorial-card {
+  background-color: rgba(18, 15, 14, 0.85);
+  border: 1px solid rgba(220, 195, 175, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: rgba(216, 58, 52, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(216, 58, 52, 0.15);
+}
+
+.editorial-card-crimson {
+  background-color: rgba(20, 16, 15, 0.9);
+  border: 1px solid rgba(216, 58, 52, 0.3);
+}
+
+.editorial-card-crimson:hover {
+  border-color: rgba(216, 58, 52, 0.7);
+  box-shadow: 0 12px 35px -8px rgba(216, 58, 52, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0908;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2420;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d83a34;
+}
+
+/* Rotating Stamp Animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+/* Pulse animation for freelance status */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.15);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
+}
