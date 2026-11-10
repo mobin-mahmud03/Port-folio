@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Sparkles, Download, ArrowDown, Upload, Code2, Database, ShieldCheck } from 'lucide-react';
+import React from 'react';
+import { Sparkles, Download, ArrowDown, Code2, Database, ShieldCheck } from 'lucide-react';
+import portraitImg from '../assets/portait.png';
 
 interface HeroProps {
   resumeUrl?: string;
@@ -10,18 +11,8 @@ export const Hero: React.FC<HeroProps> = ({
   resumeUrl = 'https://drive.google.com/file/d/1uxALrEJ5UvhPQpCvDBH-oixQ2YiPBd6X/view?usp=drive_link', 
   onOpenResume 
 }) => {
-  const [customPhoto, setCustomPhoto] = useState<string | null>(null);
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setCustomPhoto(url);
-    }
-  };
-
   return (
-    <section className="relative w-full pt-6 pb-16 overflow-hidden border-b border-[#221c19]">
+    <section className="relative w-full pt-6 pb-12 lg:pb-0 overflow-hidden border-b border-[#221c19]">
       {/* Background radial crimson haze */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#d83a34]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
@@ -34,10 +25,10 @@ export const Hero: React.FC<HeroProps> = ({
 
       {/* Hero 3-Column Core Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 sm:mt-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-center">
           
           {/* Left Column: Specialization & Philosophy */}
-          <div className="lg:col-span-3 flex flex-col justify-between space-y-8 order-2 lg:order-1">
+          <div className="lg:col-span-3 flex flex-col justify-between space-y-8 order-2 lg:order-1 lg:pb-8">
             {/* Disciplines */}
             <div>
               <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#f2ece2] tracking-tight uppercase">
@@ -79,99 +70,48 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Center Column: Portrait with Crimson Radial Eclipse */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center relative order-1 lg:order-2">
+          <div className="lg:col-span-5 flex flex-col items-center justify-end relative order-1 lg:order-2 self-end">
             
-            {/* Rotating Circular Stamp Badge (Top-Right of Portrait) */}
-            <div className="absolute -top-4 -right-2 sm:right-6 z-20 pointer-events-none">
-              <div className="relative w-28 h-28 sm:w-32 sm:h-32 animate-spin-slow">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <path
-                    id="circlePath"
-                    d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    fill="none"
-                  />
-                  <text className="text-[8.5px] uppercase font-mono-code fill-[#d83a34] tracking-[0.22em] font-semibold">
-                    <textPath href="#circlePath" startOffset="0%">
-                      • FULL STACK • CLEAN CODE • ARCHITECTURE •
-                    </textPath>
-                  </text>
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-[#d83a34]" />
+            {/* Portrait Wrapper */}
+            <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] xl:max-w-[500px] h-[460px] sm:h-[520px] lg:h-[560px] xl:h-[600px] flex items-end justify-center">
+
+              {/* Rotating Circular Stamp Badge (Positioned on the Right Side of Portrait) */}
+              <div className="absolute top-2 sm:top-4 lg:top-6 -right-2 sm:-right-4 lg:-right-8 xl:-right-10 z-20 pointer-events-none">
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 animate-spin-slow">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <path
+                      id="circlePath"
+                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                      fill="none"
+                    />
+                    <text className="text-[8.5px] uppercase font-mono-code fill-[#d83a34] tracking-[0.22em] font-semibold">
+                      <textPath href="#circlePath" startOffset="0%">
+                        • FULL STACK • CLEAN CODE • ARCHITECTURE •
+                      </textPath>
+                    </text>
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#d83a34]" />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Crimson Eclipse Disc Backdrop */}
-            <div className="relative w-[280px] h-[340px] sm:w-[340px] sm:h-[420px] flex items-end justify-center">
-              <div className="absolute top-6 w-[250px] h-[250px] sm:w-[310px] sm:h-[310px] rounded-full bg-gradient-to-b from-[#a7231e] via-[#d83a34] to-[#771511] opacity-90 shadow-[0_0_90px_rgba(216,58,52,0.45)]"></div>
+              {/* Crimson Eclipse Disc Backdrop */}
+              <div className="absolute top-8 sm:top-10 lg:top-12 left-1/2 -translate-x-1/2 w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:w-[380px] lg:h-[380px] xl:w-[420px] xl:h-[420px] rounded-full bg-gradient-to-b from-[#a7231e] via-[#d83a34] to-[#771511] opacity-90 shadow-[0_0_90px_rgba(216,58,52,0.45)] pointer-events-none"></div>
 
-              {/* Portrait Silhouette / Photo */}
-              <div className="relative z-10 w-full h-full flex items-end justify-center overflow-hidden rounded-b-2xl">
-                {customPhoto ? (
-                  <img
-                    src={customPhoto}
-                    alt="Mobin Mahmud"
-                    className="w-full h-full object-cover object-top filter contrast-105"
-                  />
-                ) : (
-                  /* Editorial Developer Silhouette Cutout */
-                  <div className="relative w-full h-full flex flex-col items-center justify-end">
-                    <svg
-                      viewBox="0 0 300 380"
-                      className="w-[90%] h-[95%] drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)]"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      {/* Dark Turtleneck & Jacket Silhouette */}
-                      <path
-                        d="M60 380 C60 320 80 270 110 240 L135 230 L165 230 L190 240 C220 270 240 320 240 380 Z"
-                        fill="#120f0e"
-                        stroke="#221c19"
-                        strokeWidth="2"
-                      />
-                      {/* High Neck Collar */}
-                      <path
-                        d="M125 240 L125 195 C125 185 175 185 175 195 L175 240 Z"
-                        fill="#1a1513"
-                        stroke="#2e2622"
-                        strokeWidth="1.5"
-                      />
-                      {/* Head and Jawline */}
-                      <path
-                        d="M125 195 C120 160 118 135 125 110 C135 80 165 80 175 110 C182 135 180 160 175 195 C165 205 135 205 125 195 Z"
-                        fill="#332a25"
-                      />
-                      {/* Editorial Eyewear / Sunglasses */}
-                      <rect x="127" y="125" width="20" height="12" rx="4" fill="#0b0908" stroke="#d83a34" strokeWidth="1.5" />
-                      <rect x="153" y="125" width="20" height="12" rx="4" fill="#0b0908" stroke="#d83a34" strokeWidth="1.5" />
-                      <line x1="147" y1="130" x2="153" y2="130" stroke="#d83a34" strokeWidth="1.5" />
-                      {/* Wavy Editorial Hair */}
-                      <path
-                        d="M115 115 C110 85 125 60 150 55 C175 60 190 85 185 115 C175 90 160 80 150 82 C140 80 125 90 115 115 Z"
-                        fill="#15110f"
-                      />
-                    </svg>
-
-                    {/* Subtle upload badge so the user can test their own image immediately */}
-                    <label className="absolute bottom-3 flex items-center gap-1.5 px-3 py-1 bg-[#161210]/95 hover:bg-[#d83a34] border border-[#d83a34]/60 text-[10px] font-mono-code uppercase text-[#f2ece2] rounded-full cursor-pointer shadow-lg transition-colors z-30">
-                      <Upload className="w-3 h-3" />
-                      <span>Upload Photo</span>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange={handleImageUpload}
-                      />
-                    </label>
-                  </div>
-                )}
+              {/* Fixed Portrait Photo */}
+              <div className="relative z-10 w-full h-full flex items-end justify-center">
+                <img
+                  src={portraitImg}
+                  alt="Mobin Mahmud"
+                  className="w-full h-full object-contain object-bottom filter contrast-105 select-none pointer-events-none"
+                />
               </div>
             </div>
           </div>
 
           {/* Right Column: Name, Bio, Stats, and Resume Button */}
-          <div className="lg:col-span-4 flex flex-col justify-between space-y-6 order-3">
+          <div className="lg:col-span-4 flex flex-col justify-between space-y-6 order-3 lg:pb-8">
             <div>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#f2ece2] tracking-tight uppercase">
                 MOBIN MAHMUD
