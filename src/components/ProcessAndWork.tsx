@@ -67,9 +67,9 @@ export const ProcessAndWork: React.FC = () => {
     {
       id: 2,
       title: 'BAZAR DOR — DAILY MARKET PRICE TRACKER',
-      category: 'BACKEND & FRONTEND // NODE.JS // MYSQL',
+      category: 'BACKEND & FRONTEND // NEXT.JS // MONGODB',
       description: 'A one-stop platform for tracking daily prices of essential commodities, monitoring price fluctuations, and comparing prices across markets.',
-      stack: ['React', 'Next.js', 'Express.js', 'MySQL', 'Vercel'],
+      stack: ['React', 'Next.js', 'Express.js', 'MONGODB', 'Vercel'],
       githubUrl: 'https://github.com/mobin-mahmud03/bazar-dor-project',
       liveUrl: 'https://bazar-dor-project-ten.vercel.app/',
       mockupHeader: 'bazar-dor.vercel.app',
