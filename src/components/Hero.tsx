@@ -7,9 +7,9 @@ interface HeroProps {
   onOpenResume?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ 
-  resumeUrl = 'https://drive.google.com/file/d/1uxALrEJ5UvhPQpCvDBH-oixQ2YiPBd6X/view?usp=drive_link', 
-  onOpenResume 
+export const Hero: React.FC<HeroProps> = ({
+  resumeUrl = 'https://drive.google.com/file/d/1uxALrEJ5UvhPQpCvDBH-oixQ2YiPBd6X/view?usp=drive_link',
+  onOpenResume
 }) => {
   return (
     <section className="relative w-full pt-6 pb-12 lg:pb-0 overflow-hidden border-b border-[#221c19]">
@@ -25,8 +25,8 @@ export const Hero: React.FC<HeroProps> = ({
 
       {/* Hero 3-Column Core Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 sm:mt-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-center">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 items-center">
+
           {/* Left Column: Specialization & Philosophy */}
           <div className="lg:col-span-3 flex flex-col justify-between space-y-8 order-2 lg:order-1 lg:pb-8">
             {/* Disciplines */}
@@ -45,7 +45,7 @@ export const Hero: React.FC<HeroProps> = ({
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[#d83a34] rounded-full"></span>
-                  Database & Better Auth
+                  Database
                 </p>
               </div>
               <div className="w-12 h-[2px] bg-[#d83a34] mt-5"></div>
@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({
               <p className="text-xs sm:text-sm font-medium tracking-wide uppercase text-[#e4ded5] leading-relaxed">
                 I design and engineer digital experiences that are robust, intuitive, beautiful and impactful.
               </p>
-              
+
               {/* Stylized Handwritten Signature */}
               <div className="mt-4 flex items-center justify-between pt-2 border-t border-[#221c19]">
                 <svg className="w-32 h-9 text-[#d83a34]" viewBox="0 0 200 60" fill="none" stroke="currentColor">
@@ -71,13 +71,13 @@ export const Hero: React.FC<HeroProps> = ({
 
           {/* Center Column: Portrait with Crimson Radial Eclipse */}
           <div className="lg:col-span-5 flex flex-col items-center justify-end relative order-1 lg:order-2 self-end">
-            
+
             {/* Portrait Wrapper */}
-            <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] xl:max-w-[500px] h-[460px] sm:h-[520px] lg:h-[560px] xl:h-[600px] flex items-end justify-center">
+            <div className="relative w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[400px] xl:max-w-[440px] h-[460px] sm:h-[500px] lg:h-[530px] xl:h-[560px] flex items-end justify-center">
 
               {/* Rotating Circular Stamp Badge (Positioned on the Right Side of Portrait) */}
-              <div className="absolute top-2 sm:top-4 lg:top-6 -right-2 sm:-right-4 lg:-right-8 xl:-right-10 z-20 pointer-events-none">
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 animate-spin-slow">
+              <div className="absolute top-2 sm:top-4 lg:top-6 right-0 sm:right-0 lg:-right-2 xl:-right-4 z-20 pointer-events-none">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 animate-spin-slow">
                   <svg viewBox="0 0 100 100" className="w-full h-full">
                     <path
                       id="circlePath"
@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
 
               {/* Crimson Eclipse Disc Backdrop */}
-              <div className="absolute top-8 sm:top-10 lg:top-12 left-1/2 -translate-x-1/2 w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:w-[380px] lg:h-[380px] xl:w-[420px] xl:h-[420px] rounded-full bg-gradient-to-b from-[#a7231e] via-[#d83a34] to-[#771511] opacity-90 shadow-[0_0_90px_rgba(216,58,52,0.45)] pointer-events-none"></div>
+              <div className="absolute top-10 sm:top-12 lg:top-14 left-1/2 -translate-x-1/2 w-[240px] h-[240px] sm:w-[270px] sm:h-[270px] lg:w-[290px] lg:h-[290px] xl:w-[310px] xl:h-[310px] rounded-full bg-gradient-to-b from-[#a7231e] via-[#d83a34] to-[#771511] opacity-90 shadow-[0_0_40px_rgba(216,58,52,0.35)] pointer-events-none"></div>
 
               {/* Fixed Portrait Photo */}
               <div className="relative z-10 w-full h-full flex items-end justify-center">
@@ -117,9 +117,9 @@ export const Hero: React.FC<HeroProps> = ({
                 MOBIN MAHMUD
               </h2>
               <p className="text-xs font-mono-code text-[#d83a34] uppercase tracking-widest mt-1 font-semibold">
-                FULL-STACK DEVELOPER & ARCHITECT
+                FULL-STACK DEVELOPER
               </p>
-              
+
               <p className="text-xs sm:text-sm text-[#b0a69a] mt-4 leading-relaxed font-normal">
                 I am a full-stack engineer crafting clean, resilient and high-performance digital systems. I specialize in building complete web products with TypeScript, React, Next.js, Node.js, and secure auth.
               </p>
@@ -131,15 +131,15 @@ export const Hero: React.FC<HeroProps> = ({
                 <div className="flex justify-center mb-1 text-[#d83a34]">
                   <Code2 className="w-4 h-4" />
                 </div>
-                <div className="text-xl font-display font-bold text-[#f2ece2]">3+</div>
-                <div className="text-[9px] font-mono-code uppercase tracking-wider text-[#8e857c] mt-0.5">Years Exp</div>
+                <div className="text-xl font-display font-bold text-[#f2ece2]">6+</div>
+                <div className="text-[9px] font-mono-code uppercase tracking-wider text-[#8e857c] mt-0.5">Months Exp</div>
               </div>
 
               <div className="p-3 rounded-lg border border-[#2e2622] bg-[#14100e] text-center hover:border-[#d83a34]/50 transition-colors">
                 <div className="flex justify-center mb-1 text-[#d83a34]">
                   <Database className="w-4 h-4" />
                 </div>
-                <div className="text-xl font-display font-bold text-[#f2ece2]">20+</div>
+                <div className="text-xl font-display font-bold text-[#f2ece2]">5+</div>
                 <div className="text-[9px] font-mono-code uppercase tracking-wider text-[#8e857c] mt-0.5">Projects</div>
               </div>
 
