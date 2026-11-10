@@ -10,6 +10,8 @@ import {
   ArrowUpRight
 } from 'lucide-react';
 import { GithubIcon } from './GithubIcon';
+import kindredactsImg from '../assets/kindredacts.png';
+import bazardorImg from '../assets/bazardor.png';
 
 export const ProcessAndWork: React.FC = () => {
   const steps = [
@@ -55,7 +57,7 @@ export const ProcessAndWork: React.FC = () => {
       githubUrl: 'https://github.com/mobin-mahmud03/kinderacts-client',
       liveUrl: 'https://kinderacts-client.vercel.app/',
       mockupHeader: 'kinderacts-client.vercel.app',
-      image: 'src/assets/kindredacts.png',
+      image: kindredactsImg,
       metrics: [
         { label: 'Focus', value: 'Social Welfare' },
         { label: 'Auth Flow', value: 'Better Auth' },
@@ -71,7 +73,7 @@ export const ProcessAndWork: React.FC = () => {
       githubUrl: 'https://github.com/mobin-mahmud03/bazar-dor-project',
       liveUrl: 'https://bazar-dor-project-ten.vercel.app/',
       mockupHeader: 'bazar-dor.vercel.app',
-      image: 'src/assets/bazardor.png',
+      image: bazardorImg,
       metrics: [
         { label: 'Engine', value: 'Price Tracker' },
         { label: 'Database', value: 'MySQL' },
